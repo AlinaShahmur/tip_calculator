@@ -1,0 +1,34 @@
+.calc {
+    margin: 50px auto 0 auto;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #99ddff;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0); 
+    &__inpSum {
+        width: 30%;
+        outline: none;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    &__selectRate {
+        border: none;
+        outline: none;
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+}
+
+.title-h3 {
+    color: #004466;
+}
+
