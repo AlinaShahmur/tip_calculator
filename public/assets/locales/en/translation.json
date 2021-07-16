@@ -8,5 +8,9 @@
     "satisfy": "satisfy",
     "high": "high",
     "exceeds_expectations": "exceeds expectations",
-    "amount": "amount..."
+    "amount": "amount...",
+    "close": "Close",
+    "the_input_is_not_valid": "The input is not valid",
+    "you_cannot_enter_negative_numbers": "You cannot enter negative numbers",
+    "you_did_not_enter_any_value": "You didn't enter any value"
 }

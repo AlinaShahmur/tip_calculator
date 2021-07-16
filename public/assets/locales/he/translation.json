@@ -8,5 +8,9 @@
     "satisfy": "מספקת",
     "high": "גבוהה",
     "exceeds_expectations": "מעל הצופה",
-    "amount": "...סכום"
+    "amount": "...סכום",
+    "close": "סגור",
+    "the_input_is_not_valid": "הערך אינו תקף",
+    "you_cannot_enter_negative_numbers": "את/ה לא יכול להזין מספרים שליליים",
+    "you_did_not_enter_any_value": " לא ההזנת סכום"
 }

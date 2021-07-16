@@ -6,6 +6,7 @@ import './App.scss';
 import Button from './UI/Button';
 import { useTranslation } from 'react-i18next';
 import Lang from './Lang/Lang';
+import ErrorModal from './UI/ErrorModal';
 
 export default function App() {
   const { t } = useTranslation()
@@ -15,8 +16,9 @@ export default function App() {
                   {value: 2, text: t('high')},
                   {value: 3, text: t('exceeds_expectations')}]
   const [sum, setSum] = useState(0);
-  const [indCoef, setCoef] = useState(0);
+  const [indCoef, setIndCoef] = useState(0);
   const [res, setRes] = useState(0);
+  const [error, setError] = useState();
 
   const languages = [{code: 'en', name: 'English', country_code: 'gb'},
   {code: 'he', name: 'עברית',country_code: 'il', dir:'rtl'},
@@ -29,27 +31,32 @@ export default function App() {
   }
 
   const changeSumHandler = (e) => {
-    setSum(parseInt(e.target.value))
+    setSum(+(e.target.value))
   }
   const changeCoefHandler = (e) => {
-    setCoef(e.target.value)
+    setIndCoef(e.target.value)
   }
   const inputSumValidation = (inputValue) => {
-   if (inputValue > 0 ) {
-    return true
+    if (inputValue < 0) {
+      setError({title: t("the_input_is_not_valid"), message: t('you_cannot_enter_negative_numbers') })
+    } else if (inputValue == '') {
+      setError({title: t("the_input_is_not_valid"), message: t('you_did_not_enter_any_value') })
    } else {
-     alert('The input is not valid')
+    return true
    }
   }
-  let result = res === 0 ? <span>0</span> :  res
+  const onCloseErrorModal = () => {
+    setError(null)
+  }
     return(
         <div className = "calc">
-          <InputData rates = {rates} 
-                    onChangeSum = {changeSumHandler}
-                    onChangeCoef = {changeCoefHandler} />
-          <Button btnTitle = {t('calculate')} onClick = {handleClick}/>
-          <OutputData result = {result}/>
-          <Lang langs = {languages}/>
-        </div>
+            {error && <ErrorModal onCloseHandler = {onCloseErrorModal} errorTitle = {error.title} errorMessage = {error.message}/>}
+            <InputData rates = {rates} 
+                      onChangeSum = {changeSumHandler}
+                      onChangeCoef = {changeCoefHandler} />
+            <Button btnTitle = {t('calculate')} onClick = {handleClick}/>
+            <OutputData result = {res}/>
+            <Lang langs = {languages}/>
+          </div>
     )
 }
