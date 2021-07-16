@@ -15,7 +15,7 @@ i18n
   .init({
     supportedLngs: ['en', 'he'],
     detection: {
-      order: ['cookie','localStorage','htmlTag','querystring', 'path', 'subdomain'],
+      order: ['cookie','htmlTag','localStorage',,'querystring', 'path', 'subdomain'],
       caches: ['cookie']
     },
     backend: {

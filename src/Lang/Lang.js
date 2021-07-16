@@ -4,8 +4,8 @@ import cookies from 'js-cookie'
 import '../App.scss'
 
 export default function Lang(props) {
-    const [isEnglish, setIsEnglish] = useState(true)
     let currentLanguageCode = cookies.get('i18next') || 'en';
+    const [isEnglish, setIsEnglish] = useState(currentLanguageCode == 'en' ? true : false)
 
     useEffect(() => {
         document.documentElement.lang = currentLanguageCode;
