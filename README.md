@@ -17,7 +17,7 @@ I used SCSS preprocessor due to allow use nested syntax that is very structured 
 
 ## How to use
 
-1. Enter the check amount in the input
+1. Enter the check amount in the input.
 
 2. Choose the rate of the service 
 
