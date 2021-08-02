@@ -19,11 +19,19 @@ I used SCSS preprocessor due to allow use nested syntax that is very structured 
 
 1. Enter the check amount in the input.
 
+![Image Instruction 1](https://res.cloudinary.com/ds609wv4s/image/upload/v1627921415/tip_calculator/1_bkztrs.jpg)
+
 2. Choose the rate of the service 
+
+![Image Instruction 2](https://res.cloudinary.com/ds609wv4s/image/upload/v1627921415/tip_calculator/2_glfq8g.jpg)
 
 3. Press on the button
 
+![Image Instruction 3](https://res.cloudinary.com/ds609wv4s/image/upload/v1627921415/tip_calculator/3_mmdfu9.jpg)
+
 4. And, vualá, get the result!
+
+![Image Instruction 4](https://res.cloudinary.com/ds609wv4s/image/upload/v1627921415/tip_calculator/4_fbilz3.jpg)
 
 
 
