@@ -10,7 +10,7 @@ import ErrorModal from './UI/ErrorModal';
 
 export default function App() {
   const { t } = useTranslation()
-  const coefs = [0, 0.1, 0.15, 0.20];
+  const coefs = [0, 0.01, 0.05, 0.1];
   const rates = [{value: 0, text: t('low')},
                   {value: 1, text: t('satisfy')},
                   {value: 2, text: t('high')},
